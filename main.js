@@ -80,18 +80,22 @@ document.getElementById("completed").addEventListener("click",
         if (element.completed === true) {
           const li = document.createElement('li')
           const span = document.createElement('span')
-          const newCheckBox = document.createElement('input');
-
-          newCheckBox.type = 'checkbox'
+          
           span.textContent = element.title
+          span.style.textDecoration = 'line-through';
 
-          li.append(newCheckBox, span)
-          list.append(li)
+          li.append(span)
+          list.appendChild(li)
           list.innerHTML += `Id: ${element.id}`;
+        
         }
       })
       document.getElementById("section2").classList.remove("d-none");
       document.getElementById('completedSection').classList.remove('visually-hidden')
+      document.getElementById('searchBar').classList.add('visually-hidden')
+
+
+      searchBar
     }return list.innerHTML=''
   });
 
