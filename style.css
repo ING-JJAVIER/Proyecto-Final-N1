@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+}
+
+.section1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+header {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 2px rgb(228 228 228);
+}
+
+h1{
+    font-weight: bold;
+    
+}
+
+.navContainer {
+    width: 100%;
+}
+
+#navBar {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#ulNavBar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.list_item {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    position: relative;
+}
+
+.list_item:after{
+    content:"";
+    width: 0;
+    height: .2rem;
+    background-color: #1c79ec;
+    border-radius: 2px;
+    bottom:0;
+    position: absolute;
+    right: 50%;
+    transition: all .5s;
+    will-change: width;
+}
+
+.list_item:hover:after{
+    width:100%;
+    right: 0;
+}
+
+#all,
+#active,
+#completed {
+    width: 5rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80%;
+}
+
+/* Segunda parte */
+
+.search-bar {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#addDetailsInput {
+    height: 3rem;
+}
+
+#addButton {
+    height: 3rem;
+}
+
+#addButton:hover {
+    background-color: #0056b3;
+}
+
+.taskList {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.task-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.task-item input[type="checkbox"] {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.task-item input[type="checkbox"]:checked {
+    background-color: blue;
+    border-color: blue;
+}
+
+#completedSection .task-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgb(239, 5, 239)
+}
